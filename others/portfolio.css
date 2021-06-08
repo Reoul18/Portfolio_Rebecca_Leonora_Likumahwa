@@ -1,0 +1,361 @@
+@font-face{
+    font-family:'exonoutline';
+    src:url('../exonoutline-4bwx4-webfont.woff');
+}
+@font-face{
+    font-family:'exonregular';
+    src:url('../exonregular-0wjed-webfont.woff');
+}
+@font-face{
+    font-family:'moonbold';
+    src:url('../moonbold.woff');
+}
+@font-face{
+    font-family:'moonregular';
+    src:url('../moonregular.woff');
+}
+
+body{
+    background: rgb(0, 0, 0);
+    color: white;
+    font-family: exonoutline;
+    margin: 0px;
+}
+
+.head {
+    position: relative; 
+    height: 30vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.head::before {    
+      content: "";
+      background-image: url('../afbeeldingen/test.jpg');
+      background-size: cover;
+      position: absolute;
+      top: 10px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.80;
+}
+
+.naam {
+  position: relative;
+  color: #ffffff;  
+  font-size: 5em;
+  text-align: center;
+}
+
+
+.naam .intro2{
+    text-align: center;
+}
+
+.sharkie{
+    width: 200px;
+    padding: 30px;
+}
+
+.text1{
+    padding: 20px;
+}
+.text2{
+    padding: 20px 0px 0px 20px;
+}
+.text22{
+    padding: 0px 0px 20px 20px;
+}
+
+p{
+    font-family: moonregular;
+    font-size: 1.2em;
+}
+.titel{
+    text-decoration: underline;
+}
+
+.flex{
+	max-width: 100%;
+	display: flex;
+	flex-flow: row;
+	flex-wrap: wrap;
+    padding: 0px 25px 0px 25px;
+}
+
+.flex-item {
+	padding: 15px;
+    margin: 15px;
+    border: 1px solid white;
+    width: 525px;
+}
+
+.item{    
+    width: 500px;
+    background-color: white;
+    padding: 10px;
+}
+
+.item:hover{
+    opacity: 0.5;
+}
+
+.item2{
+    width: 500px;
+}
+/* .item22{
+    width: 450px;
+    background-color: white;
+    padding: 10px;
+} */
+.item3{
+    width: 485px;
+}
+video{
+    width: 475px;
+    height: 275px; 
+}
+
+
+@keyframes pulsate {
+    0% { 
+        left: 0px;
+    }
+    100% { 
+        left: 20px;
+    }
+  }
+
+.digital{
+    height: 50px;
+}
+
+.a{
+    overflow: hidden;
+}
+
+#myBtn {
+    display: none; 
+    position: fixed;
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: 2px solid white;
+    outline: none;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+#myBtn:hover {
+    background-color: rgb(2, 2, 2);
+    color: white;
+}
+
+
+
+#myImg, #myImg1 {
+    width: 425px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+  
+#myImg:hover, #myImg1:hover {
+    opacity: 0.7;
+}
+  
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  }
+  
+  /* Modal Content (image) */
+  .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+  }
+  
+  /* Caption of Modal Image */
+  #caption, #caption1 {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+  }
+  
+  /* Add Animation */
+  .modal-content, #caption, #caption1 {  
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+  
+  @-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+  }
+  
+  @keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+  }
+  
+  /* The Close Button */
+  .close, .close1 {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .close:hover,
+  .close:focus, .close1:hover, .close1:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 768px){
+    .modal-content {
+      width: 100%;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1365px){
+ 
+    .text1, .text2{
+    font-size: 2.1em;
+    }
+    p, .text22{
+        font-size: 0.9em;
+    }
+    .flex-item {
+        width: 325px;
+    }
+
+    .item{    
+        width: 300px;
+        background-color: white;
+        padding: 10px;
+    }
+    .item2{
+        width: 320px;
+    }
+    
+    #myImg, #myImg1 {
+        width: 300px;
+    }
+    /* .item22{
+        width: 200px;
+        background-color: white;
+        padding: 10px;
+    } */
+    .item3{
+        width: 355px;
+    }
+    video{
+        width: 350px;
+        height: 300px; 
+    }
+}
+
+@media only screen and (min-width: 1366px) and (max-width: 1919px){
+     
+    .text1, .text2{
+        font-size: 2.3em;
+        }
+    p, .text22{
+            font-size: 1.1em;
+        }
+    .flex-item {
+        width: 355px;
+    }
+
+    .item{    
+        width: 325px;
+        background-color: white;
+        padding: 10px;
+    }
+    .item2{
+        width: 320px;
+    }
+    #myImg, #myImg1 {
+        width: 320px;
+    }
+    /* .item22{
+        width: 225px;
+        background-color: white;
+        padding: 10px;
+    } */
+    .item3{
+        width: 405px;
+    }
+    video{
+        width: 400px;
+        height: 300px; 
+    }
+}
+
+@media only screen and (min-width: 1920px){
+    .text1, .text2{
+        font-size: 2.3em;
+        }
+    p, .text22{
+            font-size: 1.1em;
+        }
+    .flex-item {
+        width: 300px;
+    }
+
+    .item{    
+        width: 290px;
+        background-color: white;
+        padding: 5px;
+    }
+    .item2{
+        width: 290px;
+    }
+    #myImg, #myImg1{
+        width: 290px;
+    }
+
+    /* .item22{
+        width: 250px;
+        background-color: white;
+        padding: 10px;
+    } */
+    .item3{
+        width: 390px;
+    }
+    video{
+        width: 365px;
+        height: 265px; 
+    }
+}

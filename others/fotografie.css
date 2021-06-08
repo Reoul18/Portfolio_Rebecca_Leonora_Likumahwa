@@ -1,0 +1,198 @@
+* {
+	box-sizing: border-box;
+}
+
+@font-face{
+    font-family: ocra;
+    src: url('OCRAExtended.woff');
+}
+
+body{
+	color:white;
+    font-family: ocra;
+	margin: 0;
+    padding: 0;
+    border: 0; 
+    background-image: url("../afbeeldingen/camera.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.container {
+	border: 1px solid black;
+	overflow: auto;
+}
+
+h1{
+	text-align: center;
+	font-size: 25px;
+}
+
+.a{
+	font-size: 15px;
+    margin: 0px;
+	padding-left: 10px;
+}
+
+.ab{
+    font-size: 15px;
+	flex-flow: column;
+    justify-content: flex-end;
+    margin: 0px;
+}
+
+.item {
+	border: 3px solid white;
+
+}
+
+img{
+	width: 150px;
+	height: auto;
+}
+
+.flex{
+	display: flex;
+	flex-flow: column;
+	padding-left: 10px;	
+	align-items:flex-start;
+}
+
+.flex-item{
+	display: flex;
+	flex-flow: row;
+	padding-bottom: 20px;
+	padding-top: 20px;
+	align-items: flex-start;
+}
+
+.hl{
+	border-top: 5px solid white;
+	width: 50px;
+	margin-right: 10px;
+}
+
+.vl {
+	border-left: 5px solid white;
+	height: 1293.5px;
+    margin: 0px;
+    right: 10px;
+    position: absolute;
+    top: 96px;
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 1279px){
+    .flex-item{
+        width: 50%;
+    }
+    .disc, .dcs100, .Sharp-J-SH04, .Canon_EOS_5D {
+        align-self: flex-end;
+        flex-flow: row-reverse;
+        margin-right: 5px;
+    }
+    .vl{
+        right: 50%;
+        height: 1466.5px;
+    }
+    
+    .disc .ab, .dcs100 .ab, .Sharp-J-SH04 .ab, .Canon_EOS_5D .ab{
+        margin-left: 10px;
+    }
+    .disc .a, .dcs100 .a, .Sharp-J-SH04 .a, .Canon_EOS_5D .a{
+        text-align: right;
+        padding-right: 10px;
+    }
+    .a, .ab{
+        font-size: 15px;
+    }
+}
+
+@media only screen and (min-width: 1280px) and (max-width: 1919px){
+	.flex-item{
+        width: 50%;
+    }
+    .disc, .dcs100, .Sharp-J-SH04, .Canon_EOS_5D {
+        align-self: flex-end;
+        flex-flow: row-reverse;
+        margin-right: 5px;
+    }
+    .vl{
+        right: 50%;
+        top: 124.5px;
+        height: 1442.5px;
+    }
+    .disc .ab, .dcs100 .ab, .Sharp-J-SH04 .ab, .Canon_EOS_5D .ab{
+        margin-left: 0px;
+    } 
+    .disc .a, .dcs100 .a, .Sharp-J-SH04 .a, .Canon_EOS_5D .a{
+        text-align: right;
+        padding-right: 10px;
+    }
+    span{
+        text-decoration: underline;
+        font-weight: bold;
+    }
+    img{
+        width: 200px;
+        height: auto;
+    }
+    .a, .ab{
+        font-size: 20px;
+    }
+    h1{
+        text-align: center;
+        font-size: 35px;
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    .flex-item{
+        width: 50%;
+        align-items: center;
+    }
+    .disc, .dcs100, .Sharp-J-SH04, .Canon_EOS_5D {
+        align-self: flex-end;
+        flex-flow: row-reverse;
+        margin-right: 10px;
+    }
+    .vl{
+        right: 50%;
+        top: 296px;
+        height: 1615px;
+    }
+    .disc .ab, .dcs100 .ab, .Sharp-J-SH04 .ab, .Canon_EOS_5D .ab{
+        margin-left: 20px;
+    } 
+    .disc .a, .dcs100 .a, .Sharp-J-SH04 .a, .Canon_EOS_5D .a{
+        text-align: right;
+        padding-right: 10px;
+    }
+    span{
+        text-decoration: underline;
+        font-weight: bold;
+    }
+    img{
+        width: 250px;
+        height: auto;
+    }
+    .a, .ab{
+        font-size: 25px;
+    }
+    .vlKlein{
+        border-left: 5px solid white;
+        height: 100px;
+        margin-top: 30px;
+    }
+    .hl{
+        width: 80px;
+    } 
+    .disc .hl, .dcs100 .hl, .Sharp-J-SH04 .hl, .Canon_EOS_5D .hl{
+        margin-right: 0px;
+    }
+    h1{
+        text-align: center;
+        font-size: 50px;
+    }
+}

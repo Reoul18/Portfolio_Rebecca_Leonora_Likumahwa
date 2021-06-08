@@ -1,0 +1,230 @@
+@font-face{
+    font-family:'exonoutline';
+    src:url('exonoutline-4bwx4-webfont.woff');
+}
+@font-face{
+    font-family:'exonregular';
+    src:url('exonregular-0wjed-webfont.woff');
+}
+
+body{
+    background: rgb(0, 0, 0);
+    color: white;
+    font-family: exonoutline;
+    margin: 0px;
+}
+
+.head {
+    position: relative; 
+    height: 30vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.head::before {    
+      content: "";
+      background-image: url('afbeeldingen/test.jpg');
+      background-size: cover;
+      position: absolute;
+      top: 10px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.80;
+}
+
+.naam {
+  position: relative;
+  color: #ffffff;
+  font-size: 5em;
+  text-align: center;
+}
+
+
+h1,h2, .intro2{
+    text-align: center;
+}
+.intro{
+    padding: 50px;
+}
+.sharkie{
+    width: 200px;
+    padding: 30px;
+}
+
+.foto{
+    width: 400px;
+}
+
+.meerWeten{
+    background-color: white;
+
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    padding: 50px;
+    margin: 50px 0px 50px 0px;
+
+}
+p{
+    font-family: exonregular;
+    font-size: 20px;
+}
+.opties{
+    margin: auto;
+}
+
+.btn{
+    background-color: rgba(223, 110, 213, 0);
+    border: 3px solid white;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    width: 100%;
+}
+.btn:hover {
+    border: 3px solid rgb(255, 255, 255);
+    background-color: #ffffff;
+}
+
+a{
+    font-family: exonregular;
+    font-size: 15px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 25px;
+    width: 100%;
+}
+a:hover{
+    color:  rgb(0, 0, 0);
+}
+
+.beeld{
+    display: none;
+    grid-area: beeld;
+    margin: auto;
+}
+.tekst{
+    grid-area: tekst;
+}
+
+h1, h2{
+    font-size: 1.8em;
+}
+p{
+    font-size: 1.2em;
+}
+a{
+    font-size: 2em;
+}
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 10px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+  }
+  
+.fa:hover {
+    opacity: 0.7;
+}
+  
+.fa-linkedin {
+    background: #007bb5;
+    color: white;
+}
+
+.icon{
+    text-align: center;
+    padding: 10px;
+}
+
+.cv{
+    font-size: 2em;
+    border: 2px solid white;
+    padding: 12px;
+}
+.cv:hover{
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1365px){
+    .intro{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "tekst beeld";
+        gap: 2px;
+    }
+    .beeld{
+        display: block;
+    }
+    .foto{
+        width: 400px;
+    }
+    h1, h2{
+        font-size: 1.7em;
+    }
+    p{
+        font-size: 1.3em;
+    }
+    a{
+        font-size: 2.2em;
+    }
+}
+@media only screen and (min-width: 1366px) and (max-width: 1919px){
+    .intro{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "beeld beeld"
+        "tekst tekst";
+        gap: 2px;
+    }
+    .foto{
+        width: 500px;
+    }
+    .beeld{
+        display: block;
+    }
+    h1, h2{
+        font-size: 2.2em;
+    }
+    p{
+        font-size: 1.5em;
+    }
+    a{
+        font-size: 2.5em;
+    }
+}
+
+@media only screen and (min-width: 1920px){    
+    .intro{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "beeld beeld"
+        "tekst tekst";
+        gap: 2px;
+    }
+    .foto{
+        width: 600px;
+    }
+    .beeld{
+        display: block;
+    }
+    h1, h2{
+        font-size: 3em;
+    }
+    p{
+        font-size: 2em;
+    }
+    a{
+        font-size: 3em;
+    }
+}

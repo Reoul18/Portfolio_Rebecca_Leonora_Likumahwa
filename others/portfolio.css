@@ -21,7 +21,9 @@ body{
     font-family: exonoutline;
     margin: 0px;
 }
-
+main{
+    font-family: exonregular;
+}
 .head {
     position: relative; 
     height: 30vh;
@@ -59,15 +61,14 @@ body{
     width: 200px;
     padding: 30px;
 }
-
 .text1{
-    padding: 20px;
+    padding: 0px 0px 0px 20px;
 }
 .text2{
     padding: 20px 0px 0px 20px;
 }
 .text22{
-    padding: 0px 0px 20px 20px;
+    padding: 0px 0px 0px 20px;
 }
 
 p{
@@ -253,8 +254,11 @@ video{
     .text1, .text2{
     font-size: 2.1em;
     }
-    p, .text22{
+    p {
         font-size: 0.9em;
+        }
+    .text22{ 
+        font-size: 1.1em;
     }
     .flex-item {
         width: 325px;
@@ -291,9 +295,12 @@ video{
     .text1, .text2{
         font-size: 2.3em;
         }
-    p, .text22{
-            font-size: 1.1em;
+    p {
+        font-size: 1em;
         }
+    .text22{ 
+        font-size: 1.2em;
+    }
     .flex-item {
         width: 355px;
     }
@@ -327,9 +334,12 @@ video{
     .text1, .text2{
         font-size: 2.3em;
         }
-    p, .text22{
-            font-size: 1.1em;
+    p {
+        font-size: 1.1em;
         }
+    .text22{ 
+        font-size: 1.3em;
+    }
     .flex-item {
         width: 300px;
     }

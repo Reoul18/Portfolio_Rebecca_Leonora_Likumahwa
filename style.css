@@ -48,6 +48,13 @@ h1,h2, .intro2{
     margin-top: 20px;
 }
 
+.intro3{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    font-size: 22px;
+}
+
 .sharkie{
     width: 200px;
     padding: 30px;
@@ -81,8 +88,13 @@ p{
     color: white;
     padding: 10px 20px;
     text-align: center;
-    width: 100%;
+    width: 30%;
 }
+
+button.btn{
+    margin-left: 35% ;
+}
+
 .btn:hover {
     border: 3px solid rgb(255, 255, 255);
     background-color: #ffffff;

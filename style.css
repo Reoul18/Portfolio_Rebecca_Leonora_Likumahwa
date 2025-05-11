@@ -25,7 +25,7 @@ body{
 
 .head::before {    
       content: "";
-      background-image: url('afbeeldingen/test.jpg');
+      background-image: url('afbeeldingen/bg.png');
       background-size: cover;
       position: absolute;
       top: 10px;

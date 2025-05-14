@@ -19,7 +19,7 @@ body{
     background: rgb(0, 0, 0);
     color: white;
     font-family: exonoutline;
-    margin: 0px;
+    margin-bottom: 500px;
 }
 main{
     font-family: exonregular;
@@ -35,13 +35,13 @@ main{
 
 .head::before {    
       content: "";
-      background-image: url('../afbeeldingen/test.jpg');
+      background-image: url('../afbeeldingen/background.png');
       background-size: cover;
       position: absolute;
-      top: 10px;
-      right: 0px;
+      top: -20px;
+      right: -50px;
       bottom: 0px;
-      left: 0px;
+      left: -50px;
       opacity: 0.80;
 }
 
@@ -243,6 +243,7 @@ video{
   }
   
   /* 100% Image Width on Smaller Screens */
+
 @media only screen and (max-width: 768px){
     .modal-content {
       width: 100%;
@@ -288,6 +289,9 @@ video{
         width: 350px;
         height: 300px; 
     }
+    .naam {
+    font-size: 7em;
+    }
 }
 
 @media only screen and (min-width: 1366px) and (max-width: 1919px){
@@ -327,6 +331,9 @@ video{
     video{
         width: 400px;
         height: 300px; 
+    }    
+    .naam {
+    font-size: 9em;
     }
 }
 
@@ -367,5 +374,8 @@ video{
     video{
         width: 365px;
         height: 265px; 
+    }  
+    .naam {
+    font-size: 11em;
     }
 }

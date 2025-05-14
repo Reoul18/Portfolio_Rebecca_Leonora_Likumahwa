@@ -6,21 +6,31 @@
     font-family:'exonregular';
     src:url('exonregular-0wjed-webfont.woff');
 }
+@font-face{
+    font-family:'halonewyork';
+    src:url('Hello\ Newyork.otf');
+}
+@font-face{
+    font-family:'perfectpenmanship';
+    src:url('KGPerfectPenmanship.otf');
+}
 
 body{
     background: rgb(0, 0, 0);
-    color: white;
-    font-family: exonoutline;
+    color: rgb(255, 255, 255);
+    font-family: exonregular;
     margin: 0px;
 }
 
 .head {
+    font-family: perfectpenmanship;
     position: relative; 
-    height: 30vh;
+    height: 20vh;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 0.75em;
 }
 
 .head::before {    
@@ -28,8 +38,8 @@ body{
       background-image: url('afbeeldingen/background.png');
       background-size: cover;
       position: absolute;
-      top: 10px;
-      right: 0px;
+      top: -20px;
+      right: -50px;
       bottom: 0px;
       left: -50px;
       opacity: 0.80;
@@ -38,7 +48,7 @@ body{
 .naam {
   position: relative;
   color: #ffffff;
-  font-size: 5em;
+  font-size: 3.5em;
   text-align: center;
 }
 
@@ -67,12 +77,14 @@ h1,h2, .intro2{
 
 .meerWeten{
     background-color: white;
-
-    color: rgb(0, 0, 0);
+    color: #000000;
     font-weight: bold;
-    padding: 50px;
+    padding: 25px;
     margin: 50px 0px 50px 0px;
-
+}
+.info{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.1em;
 }
 p{
     font-family: exonregular;
@@ -84,8 +96,8 @@ p{
 
 .btn{
     background-color: rgba(223, 110, 213, 0);
-    border: 3px solid white;
-    color: white;
+    border: 3px solid rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
     padding: 10px 20px;
     text-align: center;
     width: 50%;
@@ -157,8 +169,7 @@ a{
 }
 
 
-
-@media only screen and (min-width: 768px) and (max-width: 1365px){
+@media only screen and (min-width: 600px) and (max-width: 1365px){
     .intro{
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -170,11 +181,18 @@ a{
         display: block;
     }
     .foto{
-        width: 250px;
-        margin-top: 40px;
+        width: 300px;
+        margin-top: 10px;
     }
     h1, h2{
         font-size: 1.7em;
+    }
+    .meerWeten{
+        font-size: 1.1em;
+        padding: 50px;
+    }
+    .naam{
+        font-size: 5em;
     }
     p{
         font-size: 1.3em;
@@ -183,8 +201,14 @@ a{
         font-size: 2.2em;
     }
     .tekst{
-        margin-top: 50px;
+        margin-top: 0px;
     }
+    
+    .info{
+        margin-top: -20px;
+        margin-bottom: -20px;
+    }
+    
 }
 @media only screen and (min-width: 1366px) and (max-width: 1919px){
     .intro{
@@ -195,8 +219,17 @@ a{
         "tekst tekst";
         gap: 2px;
     }
+
+    .head {
+    height: 30vh;
+    }
+
+    .head::before {
+      top: -40px;
+    }
+
     .foto{
-        width: 300px;
+        width: 400px;
     }
     .beeld{
         display: block;
@@ -204,11 +237,22 @@ a{
     h1, h2{
         font-size: 2.2em;
     }
+    .meerWeten{
+        font-size: 1.2em;
+    }
+    .naam{
+        font-size: 6em;
+    }
     p{
         font-size: 1.5em;
     }
     a{
         font-size: 2.5em;
+    }
+    .info{
+        margin-top: -20px;
+        margin-bottom: -20px;
+        padding: 25px;
     }
 }
 
@@ -221,8 +265,17 @@ a{
         "tekst tekst";
         gap: 2px;
     }
+    .head {
+    height: 30vh;
+    }
+
+    .head::before {
+      top: -40px;
+    }
+
     .foto{
-        width: 350px;
+        width: 420px;
+        margin-top: -10px;
     }
     .beeld{
         display: block;
@@ -230,10 +283,20 @@ a{
     h1, h2{
         font-size: 2.5em;
     }
+    .meerWeten{
+        font-size: 1.5em;
+    }
+    .naam{
+        font-size: 8em;
+    }
     p{
         font-size: 1.7em;
     }
     a{
         font-size: 3em;
     }
+    .intro3{
+        font-size: 30px;
+    }
+    
 }

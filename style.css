@@ -313,7 +313,7 @@ a {
 }
 
 /* Grotere tablets en kleine laptops (vanaf 768px) */
-@media only screen and (min-width: 920px) {
+@media only screen and (min-width: 768px) {
     .site-header {
         height: 30vh;
     }

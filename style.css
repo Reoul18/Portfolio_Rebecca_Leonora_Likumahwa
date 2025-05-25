@@ -1,161 +1,236 @@
-@font-face{
-    font-family:'exonoutline';
-    src:url('exonoutline-4bwx4-webfont.woff');
+/* Font declaraties */
+@font-face {
+    font-family: 'exonoutline';
+    src: url('exonoutline-4bwx4-webfont.woff');
 }
-@font-face{
-    font-family:'exonregular';
-    src:url('exonregular-0wjed-webfont.woff');
+@font-face {
+    font-family: 'exonregular';
+    src: url('exonregular-0wjed-webfont.woff');
 }
-@font-face{
-    font-family:'halonewyork';
-    src:url('Hello\ Newyork.otf');
+@font-face {
+    font-family: 'halonewyork';
+    src: url('Hello Newyork.otf');
 }
-@font-face{
-    font-family:'perfectpenmanship';
-    src:url('KGPerfectPenmanship.otf');
+@font-face {
+    font-family: 'perfectpenmanship';
+    src: url('KGPerfectPenmanship.otf');
 }
 
-body{
+/* Algemene stijlen voor de body */
+body {
     background: rgb(0, 0, 0);
     color: rgb(255, 255, 255);
-    font-family: exonregular;
-    margin: 0px;
+    font-family: 'exonregular', sans-serif; /* Fallback font toegevoegd */
+    margin: 0;
+    line-height: 1.6; /* Betere leesbaarheid */
+    overflow-x: hidden; /* Voorkomt horizontale scrollbalken */
 }
 
-.head {
-    font-family: perfectpenmanship;
+/* Header stijlen */
+.site-header {
     position: relative; 
-    height: 20vh;
+    height: 20vh; /* Aangepaste hoogte voor mobiel om groter logo te accommoderen */
     width: 100%;
     display: flex;
+    flex-direction: column; /* Stapel items verticaal */
     align-items: center;
     justify-content: center;
-    font-size: 0.75em;
+    overflow: hidden; /* Om te voorkomen dat de pseudo-elementen buiten de header vallen */
+    text-align: center; /* Centreer tekst in de header */
+    font-family: 'perfectpenmanship', cursive; /* Specifieke font voor de header */
+    font-size: 0.75em; /* Font size zoals in de originele CSS */
 }
 
-.head::before {    
-      content: "";
-      background-image: url('afbeeldingen/background.png');
-      background-size: cover;
-      position: absolute;
-      top: -20px;
-      right: -50px;
-      bottom: 0px;
-      left: -50px;
-      opacity: 0.80;
+/* Achtergrondafbeelding voor de header */
+.site-header::before {    
+    content: "";
+    background-image: url('afbeeldingen/background.png');
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0; /* Zorgt dat de achtergrond de hele header vult */
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.80;
+    z-index: -1;
 }
 
+/* Stijlen voor het logo in de header */
+.sharkie {
+    width: 150px; /* Veel groter gemaakt voor mobiel */
+    padding: 15px; /* Aangepaste padding */
+    z-index: 1;
+    margin-bottom: -15px; /* Trek het logo iets omhoog naar de naam */
+}
+
+/* Container voor de naam in de header */
+.site-header-content {
+    position: relative;
+    z-index: 1;
+}
+
+/* Naam stijlen */
 .naam {
-  position: relative;
-  color: #ffffff;
-  font-size: 3.5em;
-  text-align: center;
-}
-
-
-h1,h2, .intro2{
+    color: #ffffff;
+    font-size: 2.8em; /* Aangepast voor mobiel */
     text-align: center;
+    margin: 0;
+}
+
+/* Algemene typografie voor h1, h2 en p */
+h1 {
+    text-align: center; /* Standaard gecentreerd */
     margin-top: 20px;
+    font-size: 2.2em; /* Duidelijk groter dan h2 */
 }
 
-.intro3{
-    text-align: center;
+h2 {
+    text-align: center; /* Standaard gecentreerd */
     margin-top: 20px;
-    margin-bottom: 0px;
-    font-size: 22px;
+    font-size: 1.8em; /* Standaard font-size voor kleinere schermen */
 }
 
-.sharkie{
-    width: 200px;
-    padding: 30px;
+p {
+    font-family: 'exonregular', sans-serif;
+    font-size: 1.1em; /* Iets kleiner voor betere leesbaarheid op mobiel */
 }
 
-.foto{
-    width: 200px;
-    margin: 20px;
+/* Specifieke stijl voor .info paragraaf */
+.info {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Specifieke font voor .info */
+    font-size: 1.1em; /* Consistent met andere p */
 }
 
-.meerWeten{
-    background-color: white;
-    color: #000000;
+/* Algemene link stijlen */
+a {
+    font-family: 'exonregular', sans-serif;
+    font-size: 1.8em; /* Aangepast voor mobiel */
+    color: white; /* Standaard wit */
+    text-decoration: none;
     font-weight: bold;
-    padding: 25px;
-    margin: 50px 0px 50px 0px;
-}
-.info{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 1.1em;
-}
-p{
-    font-family: exonregular;
-    font-size: 20px;
-}
-.opties{
-    margin: auto;
+    transition: color 0.3s ease; /* Soepele overgang bij hover */
 }
 
-.btn{
-    background-color: rgba(223, 110, 213, 0);
-    border: 3px solid rgb(255, 255, 255);
-    color: rgb(255, 255, 255);
-    padding: 10px 20px;
+/* Introductie sectie stijlen */
+/* Standaard (mobiel): Foto boven tekst, alles gecentreerd */
+.intro-section {
+    display: flex;
+    flex-direction: column; /* Stapel items verticaal (foto boven tekst) */
+    align-items: center; /* Centreer items horizontaal */
+    justify-content: center;
+    padding: 20px 40px; /* Meer horizontale padding */
+    box-sizing: border-box;
+    width: 100%; /* Vult altijd de breedte van het scherm */
+    margin: 40px auto; /* Centreer de sectie en voeg verticale marge toe */
+}
+
+/* Profielfoto container */
+.beeld {
+    display: block; /* Altijd zichtbaar */
+    margin: 0 auto 20px auto; /* Centreer en voeg marge onder de foto toe */
+    text-align: center; /* Zorgt voor centrering van de afbeelding binnen de div */
+}
+
+/* Profielfoto stijlen */
+.foto {
+    width: 180px; /* Iets kleiner gemaakt voor mobiel */
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    display: block;
+    margin: 0 auto; /* Centreer de afbeelding zelf */
+}
+
+/* Tekst container in introductie */
+.tekst {
+    margin: 0 20px;
+    text-align: center; /* Tekst centreren op alle schermgroottes */
+}
+
+.intro2 {
+    text-align: center; /* Zorgt ervoor dat intro2 altijd gecentreerd is */
+    margin-top: 20px;
+}
+
+/* Meer info sectie stijlen */
+.more-info {
+    background-color: white;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    padding: 15px 20px;
+    margin: 30px 0;
+    text-align: left; /* Links uitlijnen */
+    box-sizing: border-box;
+}
+
+/* Portfolio knop sectie stijlen */
+.portfolio-link {
     text-align: center;
-    width: 50%;
+    padding: 20px;
+    max-width: 600px; /* Beperk de breedte van de knop container */
+    margin: 0 auto; /* Centreer de container */
 }
 
-button.btn{
-    margin-left: 25%;
+/* Knop stijlen */
+.btn {
+    background-color: transparent;
+    border: 3px solid white;
+    color: white;
+    padding: 15px 40px; /* Padding verhoogd om knop veel langer te maken */
+    text-align: center;
+    width: 100%; /* Maak de knop 100% breed van zijn container */
+    display: block;
+    margin: 20px auto;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    border-radius: 5px;
 }
 
 .btn:hover {
-    border: 3px solid rgb(255, 255, 255);
     background-color: #ffffff;
+    border-color: #ffffff;
 }
 
-a{
-    font-family: exonregular;
-    font-size: 15px;
-    color: white;
-    text-decoration: none;
+/* Deze regel zorgt ervoor dat de tekst zwart wordt wanneer de knop gehoverd wordt */
+.btn:hover a {
+    color: rgb(0, 0, 0);
+}
+
+.btn a {
+    font-size: 1.5em; /* Specifieke font-size voor de link in de knop, iets groter voor CTA */
     font-weight: bold;
-    font-size: 25px;
-    width: 100%;
-}
-a:hover{
-    color:  rgb(0, 0, 0);
 }
 
-.beeld{
-    display: none;
-    grid-area: beeld;
-    margin: auto;
-}
-.tekst{
-    grid-area: tekst;
-    margin: 0px 20px 0px 20px;
+/* Contact sectie stijlen */
+.contact-section {
+    text-align: center;
+    padding: 10px;
 }
 
-h1, h2{
-    font-size: 1.8em;
-}
-p{
-    font-size: 1.2em;
-}
-a{
-    font-size: 2em;
+.intro3 {
+    margin-top: 20px;
+    margin-bottom: 15px;
+    font-size: 22px;
 }
 
+/* Social media iconen stijlen */
 .fa {
-    padding: 20px;
-    font-size: 30px;
-    width: 10px;
+    padding: 15px;
+    font-size: 25px;
+    width: 25px;
     text-align: center;
     text-decoration: none;
-    margin: 5px 2px;
-  }
+    margin: 0 5px;
+    border-radius: 0; /* Verwijderd om de iconen niet rond te maken */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
   
 .fa:hover {
-    opacity: 0.7;
+    opacity: 0.8;
+    transform: translateY(-3px);
 }
   
 .fa-linkedin {
@@ -163,140 +238,210 @@ a{
     color: white;
 }
 
-.icon{
-    text-align: center;
-    padding: 10px;
-}
+/* Media Queries voor responsiviteit */
 
-
-@media only screen and (min-width: 600px) and (max-width: 1365px){
-    .intro{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas: 
-        "tekst beeld";
-        gap: 2px;
+/* Schermen vanaf 600px */
+@media only screen and (min-width: 600px) {
+    .site-header {
+        height: 25vh; /* Hogere header */
     }
-    .beeld{
-        display: block;
+    .sharkie {
+        width: 200px; /* Groter logo */
     }
-    .foto{
-        width: 300px;
-        margin-top: 10px;
+    .naam {
+        font-size: 4em;
     }
-    h1, h2{
-        font-size: 1.7em;
+    h1 {
+        font-size: 2.5em; /* Groter dan h2 */
     }
-    .meerWeten{
-        font-size: 1.1em;
-        padding: 50px;
+    h2 {
+        font-size: 2.0em;
     }
-    .naam{
-        font-size: 5em;
-    }
-    p{
-        font-size: 1.3em;
-    }
-    a{
-        font-size: 2.2em;
-    }
-    .tekst{
-        margin-top: 0px;
-    }
-    
-    .info{
-        margin-top: -20px;
-        margin-bottom: -20px;
-    }
-    
-}
-@media only screen and (min-width: 1366px) and (max-width: 1919px){
-    .intro{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas: 
-        "beeld beeld"
-        "tekst tekst";
-        gap: 2px;
-    }
-
-    .head {
-    height: 30vh;
-    }
-
-    .head::before {
-      top: -40px;
-    }
-
-    .foto{
-        width: 400px;
-    }
-    .beeld{
-        display: block;
-    }
-    h1, h2{
-        font-size: 2.2em;
-    }
-    .meerWeten{
+    p {
         font-size: 1.2em;
     }
-    .naam{
-        font-size: 6em;
+    a {
+        font-size: 2em;
     }
-    p{
-        font-size: 1.5em;
+    /* Intro sectie: foto links van tekst */
+    .intro-section {
+        display: grid; /* Gebruik grid voor lay-out */
+        grid-template-columns: auto 1fr; /* Foto links (auto breedte), tekst rechts (rest) */
+        grid-template-areas: 
+            "beeld tekst"; /* Beeld links, tekst rechts */
+        gap: 40px; /* Vaste afstand tussen foto en tekst */
+        align-items: center; /* Centreer items verticaal in de grid cel */
+        padding: 30px 60px; /* Meer horizontale padding */
+        width: 100%; /* Vult de breedte */
+        margin: 40px auto; /* Centreer de sectie */
     }
-    a{
-        font-size: 2.5em;
+    .beeld {
+        display: block;
+        text-align: left; /* Foto links uitlijnen binnen zijn grid cel */
+        margin: 0; /* Reset margin voor grid */
     }
-    .info{
-        margin-top: -20px;
-        margin-bottom: -20px;
-        padding: 25px;
+    .foto {
+        width: 250px; /* Aangepast voor 600px */
+        margin: 0; /* Reset margin voor grid */
+    }
+    .tekst {
+        margin: 0;
+        text-align: center; /* Tekst centreren binnen zijn grid cel */
+    }
+    .intro2 {
+        text-align: center; /* Zorgt ervoor dat intro2 ook gecentreerd is */
+    }
+    .more-info {
+        padding: 20px 30px;
+        margin: 30px 0;
+        font-size: 1.2em; /* Groter font size voor info */
+    }
+    .btn {
+        padding: 15px 40px;
+    }
+    .btn a {
+        font-size: 1.8em;
+    }
+    .intro3 {
+        font-size: 1.2em;
+    }
+    .fa {
+        padding: 18px;
+        font-size: 28px;
+        width: 28px;
     }
 }
 
-@media only screen and (min-width: 1920px){    
-    .intro{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas: 
-        "beeld beeld"
-        "tekst tekst";
-        gap: 2px;
+/* Grotere tablets en kleine laptops (vanaf 768px) */
+@media only screen and (min-width: 768px) {
+    .site-header {
+        height: 30vh;
     }
-    .head {
-    height: 30vh;
+    .sharkie {
+        width: 250px; /* Groter logo */
     }
+    .naam {
+        font-size: 5em;
+    }
+    h1 {
+        font-size: 2.8em;
+    }
+    h2 {
+        font-size: 2.2em;
+    }
+    p {
+        font-size: 1.3em;
+    }
+    a {
+        font-size: 2.2em;
+    }
+    .foto {
+        width: 300px; /* Aangepast voor 768px */
+    }
+    .more-info {
+        padding: 25px 40px;
+        font-size: 1.3em; /* Groter font size voor info */
+    }
+    .btn a {
+        font-size: 2em;
+    }
+    .intro3 {
+        font-size: 1.3em;
+    }
+    .fa {
+        padding: 20px;
+        font-size: 30px;
+        width: 30px;
+    }
+}
 
-    .head::before {
-      top: -40px;
+/* Desktops en groter (vanaf 1366px) */
+@media only screen and (min-width: 1366px) {
+    .site-header {
+        height: 35vh;
     }
-
-    .foto{
-        width: 420px;
-        margin-top: -10px;
+    .sharkie {
+        width: 300px; /* Groter logo */
     }
-    .beeld{
-        display: block;
+    .site-header::before {
+        top: -40px;
+        left: -50px;
+        right: -50px;
     }
-    h1, h2{
+    .naam {
+        font-size: 6em;
+    }
+    h1 {
+        font-size: 3.2em;
+    }
+    h2 {
         font-size: 2.5em;
     }
-    .meerWeten{
+    p {
         font-size: 1.5em;
     }
-    .naam{
+    a {
+        font-size: 2.5em;
+    }
+    .foto {
+        width: 400px;
+    }
+    .more-info {
+        padding: 30px 60px;
+        font-size: 1.4em;
+    }
+    .btn a {
+        font-size: 2.2em;
+    }
+    .intro3 {
+        font-size: 1.4em;
+    }
+    .fa {
+        padding: 22px;
+        font-size: 32px;
+        width: 32px;
+    }
+}
+
+/* Grote schermen (vanaf 1920px) */
+@media only screen and (min-width: 1920px) {    
+    .site-header {
+        height: 40vh;
+    }
+    .sharkie {
+        width: 350px; /* Grootste logo */
+    }
+    .naam {
         font-size: 8em;
     }
-    p{
-        font-size: 1.7em;
+    h1 {
+        font-size: 3.8em;
     }
-    a{
+    h2 {
         font-size: 3em;
     }
-    .intro3{
+    p {
+        font-size: 1.7em;
+    }
+    a {
+        font-size: 3em;
+    }
+    .foto {
+        width: 420px;
+    }
+    .more-info {
+        padding: 40px 80px;
+        font-size: 1.6em;
+    }
+    .btn a {
+        font-size: 2.5em;
+    }
+    .intro3 {
         font-size: 30px;
     }
-    
+    .fa {
+        padding: 24px;
+        font-size: 34px;
+        width: 34px;
+    }
 }
